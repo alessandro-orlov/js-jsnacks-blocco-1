@@ -8,11 +8,11 @@ snackUno.addEventListener('click',
   function() {
     //Inserimento numeri
     do {
-      var primoNumero = prompt('Inserisci il primo numero');
+      var primoNumero = parseInt(prompt('Inserisci il primo numero'));
     } while ( (primoNumero == '') || (primoNumero == null) || (isNaN(primoNumero)) )
 
     do {
-      var secondoNumero = prompt('Inserisci il secondo numero');
+      var secondoNumero = parseInt(prompt('Inserisci il secondo numero'));
     } while( (secondoNumero == '') || (secondoNumero == null) || (isNaN(secondoNumero)) )
 
     //Messagio universale

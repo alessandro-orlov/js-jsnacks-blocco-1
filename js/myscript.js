@@ -111,37 +111,60 @@
 // grande Gatsby, chiedi all’utente il suo nome e comunicagli se
 // può partecipare o no alla festa.
 
-alert('JSnack - Esercizio 4')
-
-// Lista nomi
-var listaNomi = ['Alessandro', 'Francesco', 'Chiara', 'Fabio', 'Nikolas'];
-
-// Chiedo all'utente il suo nome
-var numeUtente = prompt('Quale il tuo nome?');
-
-//Variabile di controllo
-var accessGranted = false;
-
-// Verifico se il nome è presente nella lista
-var i = 0;
-while( (accessGranted == false ) && (i < listaNomi.length) ) {
-
-  if(numeUtente == listaNomi[i]) {
-    accessGranted = true;
-  }
-
-  // Interruzione Loop
-  i++
-}
-
-//OUTPUT
-if( accessGranted === true ) {
-  alert('Puoi entrare')
-} else {
-  alert('Smamma');
-}
+// alert('JSnack - Esercizio 4')
+//
+// //VARIABILI
+// var listaNomi = ['Alessandro', 'Francesco', 'Chiara', 'Fabio', 'Nikolas'];
+// var numeUtente = prompt('Quale il tuo nome?');
+// var accessGranted = false;
+//
+// //LOGICA
+// // Verifico se il nome è presente nella lista
+// var i = 0;
+// while( (accessGranted == false ) && (i < listaNomi.length) ) {
+//
+//   if(numeUtente == listaNomi[i]) {
+//     accessGranted = true;
+//   }
+//
+//   // Interruzione Loop
+//   i++
+// }
+//
+// //OUTPUT
+// if( accessGranted === true ) {
+//   alert('Puoi entrare')
+// } else {
+//   alert('Smamma');
+// }
 
 //========== JSnack 5 =================
 
 // Chiedi un numero di 4 cifre all’utente e calcola la somma
 // di tutte le cifre che compongono il numero.
+
+alert('JSnack - Esercizio 5')
+
+//VARIABILI
+do {
+  var numeroUtente = prompt('Inserisci un numero di 4 cifre')
+} while ( (numeroUtente == '') || (numeroUtente == null) || isNaN(numeroUtente));
+console.log(numeroUtente);
+
+//LOGICA
+//Converto il valore inserito in Array con .split
+var numeroUtenteArray = numeroUtente.split("")
+console.log(numeroUtenteArray)
+
+//Calcolo la somma di tutti i numeri dell Array
+var somma = 0;
+var i = 0;
+while (i < numeroUtenteArray.length) {
+
+  somma = somma + parseInt(numeroUtenteArray[i]);
+  //Interruzione loop
+  i++
+}
+
+//OUTPUT
+alert('La somma dei numeri inseriti è ' + somma);

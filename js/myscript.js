@@ -84,24 +84,24 @@
 // alert('La somma dei numeri inseriti è: ' + somma);
 
 
-alert('JSnack - Esercizio 3 (Versione - while)')
-var somma = 0;
-
-var i = 1;
-while(i <= 5) {
-  do {
-    var numero = parseInt(prompt('inserisci numero'));
-      } while (isNaN(numero) == true);
-
-  console.log('hai inserito il numero: ' + numero);
-
-  somma = somma + numero;
-
-  //Interruzione del loop
-  i++
-}
-console.log('somma dei numeri inseriti è ' + somma)
-alert('La somma dei numeri inseriti ' + somma);
+// alert('JSnack - Esercizio 3 (Versione - while)')
+// var somma = 0;
+//
+// var i = 1;
+// while(i <= 5) {
+//   do {
+//     var numero = parseInt(prompt('inserisci numero'));
+//       } while (isNaN(numero) == true);
+//
+//   console.log('hai inserito il numero: ' + numero);
+//
+//   somma = somma + numero;
+//
+//   //Interruzione del loop
+//   i++
+// }
+// console.log('somma dei numeri inseriti è ' + somma)
+// alert('La somma dei numeri inseriti ' + somma);
 
 
 
@@ -111,8 +111,35 @@ alert('La somma dei numeri inseriti ' + somma);
 // grande Gatsby, chiedi all’utente il suo nome e comunicagli se
 // può partecipare o no alla festa.
 
+alert('JSnack - Esercizio 4')
 
+// Lista nomi
+var listaNomi = ['Alessandro', 'Francesco', 'Chiara', 'Fabio', 'Nikolas'];
 
+// Chiedo all'utente il suo nome
+var numeUtente = prompt('Quale il tuo nome?');
+
+//Variabile di controllo
+var accessGranted = false;
+
+// Verifico se il nome è presente nella lista
+var i = 0;
+while( (accessGranted == false ) && (i < listaNomi.length) ) {
+
+  if(numeUtente == listaNomi[i]) {
+    accessGranted = true;
+  }
+
+  // Interruzione Loop
+  i++
+}
+
+//OUTPUT
+if( accessGranted === true ) {
+  alert('Puoi entrare')
+} else {
+  alert('Smamma');
+}
 
 //========== JSnack 5 =================
 

@@ -2,30 +2,30 @@
 //L’utente inserisce due numeri in successione, con due prompt.
 //Il software stampa il maggiore.
 
-alert('JSnack - Esercizio 1')
-
-//Inserimento numeri
-do {
-  var primoNumero = prompt('Inserisci il primo numero');
-} while ( (primoNumero == '') || (primoNumero == null) || (isNaN(primoNumero)) )
-
-do {
-  var secondoNumero = prompt('Inserisci il secondo numero');
-} while( (secondoNumero == '') || (secondoNumero == null) || (isNaN(secondoNumero)) )
-
-//Messagio universale
-var risultato = `I numeri si equivalgono perché ${primoNumero} è uguale a ${secondoNumero}`
-
-//LOGICA
-if(primoNumero > secondoNumero) {
-  risultato = `il primo numero ${primoNumero} è maggiore del secondo`;
-} else if (primoNumero < secondoNumero) {
-  risultato = `il secondo numero ${secondoNumero} è maggiore del primo`;
-}
-
-//Output
-alert(risultato);
-
+// alert('JSnack - Esercizio 1')
+//
+// //Inserimento numeri
+// do {
+//   var primoNumero = prompt('Inserisci il primo numero');
+// } while ( (primoNumero == '') || (primoNumero == null) || (isNaN(primoNumero)) )
+//
+// do {
+//   var secondoNumero = prompt('Inserisci il secondo numero');
+// } while( (secondoNumero == '') || (secondoNumero == null) || (isNaN(secondoNumero)) )
+//
+// //Messagio universale
+// var risultato = `I numeri si equivalgono perché ${primoNumero} è uguale a ${secondoNumero}`
+//
+// //LOGICA
+// if(primoNumero > secondoNumero) {
+//   risultato = `il primo numero ${primoNumero} è maggiore del secondo`;
+// } else if (primoNumero < secondoNumero) {
+//   risultato = `il secondo numero ${secondoNumero} è maggiore del primo`;
+// }
+//
+// //Output
+// alert(risultato);
+//
 
 
 //========== JSnack 2 =================
@@ -33,7 +33,30 @@ alert(risultato);
 // L’utente inserisce due parole in successione, con due prompt.
 // Il software stampa prima la parola più corta, poi la parola più lunga.
 
+//Chiedo di inserire due parole all0utente
+do {
+  var primaParola = prompt('Inserisci la prima parola');
+} while ( (primaParola == null) || (primaParola == '') );
 
+do {
+  var secondaParola = prompt('Inserisci la seconda parola');
+} while ( (secondaParola == null) || (secondaParola == '') );
+
+//Lungheza delle parole
+var lunghezzaPrimaParola = primaParola.length;
+var lunghezzaSecondaParola = secondaParola.length;
+
+//LOGICA
+var messaggio = 'La parole hanno la stessa lungheza ';
+//Comparazione delle lunghezze delle parole
+if( lunghezzaPrimaParola > lunghezzaSecondaParola) {
+  messaggio = secondaParola + ' ' + primaParola;
+} else if (lunghezzaPrimaParola < lunghezzaSecondaParola ) {
+  messaggio = primaParola + ' ' + secondaParola;
+}
+
+//OUTPUT
+alert(messaggio)
 
 
 

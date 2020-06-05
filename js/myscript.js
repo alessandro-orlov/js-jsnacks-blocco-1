@@ -285,8 +285,8 @@ var block2Snack3 = document.getElementById('block2-jsnacks-3');
 block2Snack3.addEventListener( 'click',
   function() {
     //Azzero il risultato se stampato
-    var stampoNumeri = document.getElementById('lista-numeri-block2-jsnacks-3');
-    stampoNumeri.innerHTML = '';
+    var stampoArray = document.getElementById('lista-numeri-block2-jsnacks-3');
+    stampoArray.innerHTML = '';
 
     // Chiedo il numero all'utente
     var numeroUtente = parseInt(prompt('inserisci un numero da 1 a 10'));
@@ -299,20 +299,22 @@ block2Snack3.addEventListener( 'click',
       numeroUtente = parseInt(prompt('ERRORE: inserisci un numero da 1 a 10'));
     }
 
-    // Creo l'array cui lunghezza è pari al numero inserito
-    var numeriRandomArray = numeriRandom(numeroUtente);
-    console.log(numeriRandomArray);
+    // Stamo a scermo ogni array pari alla numeroUtente
+    for(var i = 0; i < numeroUtente; i++) {
 
-    // Stamo a scermo ogni numero
-    for(var i = 0; i < numeriRandomArray.length; i++) {
-      stampoNumeri.innerHTML += '<li>' + numeriRandomArray[i] + '</li>'
+      // Creo quantita di array pari al numero inserito
+      var numeriRandomArray = numeriRandom(10);
+      console.log(numeriRandomArray);
+
+      // Stampo a scermo tutti gli Array creati
+      stampoArray.innerHTML += '<li>' + numeriRandomArray + '</li>'
     }
 
   }
 );
 
 
-//================== Blocco2 Esercizio 5 =============
+//================== Blocco2 Esercizio 4 =============
 // Crea due tag div con due id diversi: un div avrà il testo
 // colorato di rosso mentre l’altro di verde.
 // Partendo da un array di numeri, stampiamo nell’id rosso i
@@ -329,7 +331,7 @@ block2Snack4.addEventListener( 'click',
     // Azzero il risultato precedente al click
     verdiPari.innerHTML = null;
     rossiDispari.innerHTML = null;
-    
+
     // Array di numeri
     var numeriPariDispari = numeriRandom(20);
     console.log(numeriPariDispari);
@@ -352,7 +354,7 @@ block2Snack4.addEventListener( 'click',
 // Funzione per creare Numeri Casuali
 // ---> numero: è un valore numerico
 function numeriRandom(numero) {
-  var arrayNumeri = [];
+  var arrayNumeri = [ ];
     for(var i= 0; i < numero; i++) {
       var randomNumbers = Math.floor(Math.random() * 100 + 1);
       arrayNumeri.push(randomNumbers);

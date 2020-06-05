@@ -244,12 +244,36 @@ block2Snack1.addEventListener('click',
 // Aggiungi elementi casuali all’array che ha meno elementi,
 // fino a quando ne avrà tanti quanti l’altro.
 
-//Creo 2 array di lunghezze diverse
+var block2Snack2 = document.getElementById('block2-jsnacks-2');
 
-//Verifico quale array ha meno elementi
+block2Snack2.addEventListener( 'click',
+  function() {
+
+    //Creo 2 array di lunghezze diverse
+    var primoArray = [15, 25, 16, 'ciao', 88, '0', 24];
+    console.log(primoArray);
+
+    var secondoArray = [45, 12, 63, 'yo', 79, 51, 14, 35, 96, 11, 39, 75, 'numeri'];
+    console.log(secondoArray);
+
+    while(primoArray.length != secondoArray.length) {
+      var randomNumer = Math.floor(Math.random() * 100 + 1);
+
+      if(primoArray.length > secondoArray.length ) {
+          secondoArray.push(randomNumer);
+      } else if(primoArray.length < secondoArray.length) {
+            primoArray.push(randomNumer);
+        }
+    }
+
+    //OUTPUT
+    console.log(primoArray);
+    console.log(secondoArray);
+
+  }
+);
 
 
-//In base al risultato aggiungo i numeri per farli diventare uguale
 
 
 

@@ -274,6 +274,65 @@ block2Snack2.addEventListener( 'click',
 );
 
 
+//================== Blocco2 Esercizio 3 =============
+// Fai inserire un numero, che chiameremo N, all’utente.
+// Genera N array, ognuno formato da 10 numeri casuali
+// tra 1 e 100.
+// Ogni volta che ne crei uno, stampalo a schermo.
+
+var block2Snack3 = document.getElementById('block2-jsnacks-3');
+
+block2Snack3.addEventListener( 'click',
+  function() {
+    //Azzero il risultato se stampato
+    var stampoNumeri = document.getElementById('lista-numeri-block2-jsnacks-3');
+    stampoNumeri.innerHTML = '';
+
+    // Chiedo il numero all'utente
+    var numeroUtente = parseInt(prompt('inserisci un numero da 1 a 10'));
+    // Validazione numeroUtente
+    while (
+        numeroUtente > 10
+        || numeroUtente == 0
+        || isNaN(numeroUtente)
+      ) {
+      numeroUtente = parseInt(prompt('ERRORE: inserisci un numero da 1 a 10'));
+    }
+
+    // Creo l'array cui lunghezza è pari al numero inserito
+    var numeriRandomArray = numeriRandom(numeroUtente);
+    console.log(numeriRandomArray);
+
+    // Stamo a scermo ogni numero
+    for(var i = 0; i < numeriRandomArray.length; i++) {
+      stampoNumeri.innerHTML += '<li>' + numeriRandomArray[i] + '</li>'
+    }
+
+    // ===========FUNCTION===============
+    // Funzione per creare Numeri Casuali
+    // ---> numero: è un valore numerico
+    function numeriRandom(numero) {
+      var arrayNumeri = [];
+        for(var i= 0; i < numero; i++) {
+          var randomNumbers = Math.floor(Math.random() * 100 + 1);
+          arrayNumeri.push(randomNumbers);
+        }
+      return arrayNumeri;
+    }
+
+  }
+);
+
+
+
+
+
+
+
+// Crea due tag div con due id diversi: un div avrà il testo
+// colorato di rosso mentre l’altro di verde.
+// Partendo da un array di numeri, stampiamo nell’id rosso i
+// numeri dispari e in verde i numeri pari.
 
 
 
@@ -289,13 +348,4 @@ block2Snack2.addEventListener( 'click',
 
 
 
-
-
-
-
-
-
-
-
-
-//=============================
+//================ FINE ===================

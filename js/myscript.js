@@ -2,9 +2,9 @@
 // L’utente inserisce due numeri in successione, con due prompt.
 // Il software stampa il maggiore.
 
-var snackUno = document.getElementById('jsnacks-1');
+var snack1 = document.getElementById('jsnacks-1');
 
-snackUno.addEventListener('click',
+snack1.addEventListener('click',
   function() {
     //Inserimento numeri
     do {
@@ -34,9 +34,9 @@ snackUno.addEventListener('click',
 // L’utente inserisce due parole in successione, con due prompt.
 // Il software stampa prima la parola più corta, poi la parola più lunga.
 
-var snackUno = document.getElementById('jsnacks-2');
+var snack2 = document.getElementById('jsnacks-2');
 
-snackUno.addEventListener('click',
+snack2.addEventListener('click',
   function() {
 
     //Chiedo di inserire due parole all0utente
@@ -71,9 +71,9 @@ snackUno.addEventListener('click',
 // Il programma stampa la somma di tutti i numeri inseriti. Esegui questo programma in due versioni, con il for e con il while.
 
 //Loop for
-var snackUno = document.getElementById('jsnacks-3-for');
+var snack31 = document.getElementById('jsnacks-3-for');
 
-snackUno.addEventListener('click',
+snack31.addEventListener('click',
   function() {
 
     var somma = 0;
@@ -93,9 +93,9 @@ snackUno.addEventListener('click',
 );
 
 //Loop  While
-var snackUno = document.getElementById('jsnacks-3-while');
+var snack32 = document.getElementById('jsnacks-3-while');
 
-snackUno.addEventListener('click',
+snack32.addEventListener('click',
   function() {
 
     var somma = 0;
@@ -124,9 +124,9 @@ snackUno.addEventListener('click',
 // grande Gatsby, chiedi all’utente il suo nome e comunicagli se
 // può partecipare o no alla festa.
 
-var snackUno = document.getElementById('jsnacks-4');
+var snack4 = document.getElementById('jsnacks-4');
 
-snackUno.addEventListener('click',
+snack4.addEventListener('click',
   function() {
 
     //VARIABILI
@@ -160,9 +160,9 @@ snackUno.addEventListener('click',
 // Chiedi un numero di 4 cifre all’utente e calcola la somma
 // di tutte le cifre che compongono il numero.
 
-var snackUno = document.getElementById('jsnacks-5');
+var snack5 = document.getElementById('jsnacks-5');
 
-snackUno.addEventListener('click',
+snack5.addEventListener('click',
   function() {
 
     //VARIABILI
@@ -190,3 +190,88 @@ snackUno.addEventListener('click',
     alert('La somma dei numeri inseriti è ' + somma);
   }
 );
+
+//=================================================//
+//==================JSnack - Blocco 2==============//
+//=================================================//
+
+//================== Blocco2 Esercizio 1 ==========
+// Generatore di “nomi cognomi” casuali: prendendo una lista
+// di nomi e una lista di cognomi, Gatsby vuole generare una
+// falsa lista di invitati.
+
+var block2Snack1 = document.getElementById('block2-jsnacks-1');
+
+block2Snack1.addEventListener('click',
+  function() {
+    //Quantità di invitati falsi da creare
+    var numeroInvitatiFalsi = 10;
+
+    // Lista Nomi
+    var listaNomi = ['Alex', 'Leonardo', 'Jonny', 'Frank', 'Bruce', 'Matt', 'Christian'];
+    console.log('lista di nomi: ' + listaNomi);
+
+    // Lista Cognomi
+    var listaCognomi = ['Willis', 'Lee', 'Obama', 'Depp', 'Damon', 'Sinatra', 'Trump'];
+    console.log('lista di cognomi: ' + listaCognomi);
+
+    // Lista invitati Falsi
+    var invitatiFalsi = [];
+
+    // LOGICA
+    for(var i = 0; i < numeroInvitatiFalsi; i++) {
+      // Elemento casuale della lista Nomi
+      var casualeListaNomi = Math.floor(Math.random() * listaNomi.length);
+
+      // Elemento casuale della lista Cognomi
+      var casualeListaCognomi = Math.floor(Math.random() * listaCognomi.length);
+
+      // Creo nome e cognome del invitato falso
+      var invitatoFalso = listaNomi[casualeListaNomi] + ' ' + listaCognomi[casualeListaCognomi];
+
+      // Aggungo invitato falso alla lista degli invitati falsi
+      invitatiFalsi.push(invitatoFalso);
+    }
+
+    // Stampo la lista creata degli invitati falsi
+    console.log('lista degli invitati falsi creata: ');
+    console.log(invitatiFalsi);
+  }
+);
+
+//================== Blocco2 Esercizio 2 =============
+// Crea due array che hanno un numero di elementi diversi.
+// Aggiungi elementi casuali all’array che ha meno elementi,
+// fino a quando ne avrà tanti quanti l’altro.
+
+//Creo 2 array di lunghezze diverse
+
+//Verifico quale array ha meno elementi
+
+
+//In base al risultato aggiungo i numeri per farli diventare uguale
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=============================

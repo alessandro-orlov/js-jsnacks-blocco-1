@@ -308,44 +308,54 @@ block2Snack3.addEventListener( 'click',
       stampoNumeri.innerHTML += '<li>' + numeriRandomArray[i] + '</li>'
     }
 
-    // ===========FUNCTION===============
-    // Funzione per creare Numeri Casuali
-    // ---> numero: è un valore numerico
-    function numeriRandom(numero) {
-      var arrayNumeri = [];
-        for(var i= 0; i < numero; i++) {
-          var randomNumbers = Math.floor(Math.random() * 100 + 1);
-          arrayNumeri.push(randomNumbers);
-        }
-      return arrayNumeri;
-    }
-
   }
 );
 
 
-
-
-
-
-
+//================== Blocco2 Esercizio 5 =============
 // Crea due tag div con due id diversi: un div avrà il testo
 // colorato di rosso mentre l’altro di verde.
 // Partendo da un array di numeri, stampiamo nell’id rosso i
 // numeri dispari e in verde i numeri pari.
 
+var block2Snack4 = document.getElementById('block2-jsnacks-4');
 
+block2Snack4.addEventListener( 'click',
+  function() {
+    // Assegno "id" alle variabili
+    var verdiPari = document.getElementById('verdi-pari');
+    var rossiDispari = document.getElementById('rossi-dispari');
 
+    // Azzero il risultato precedente al click
+    verdiPari.innerHTML = null;
+    rossiDispari.innerHTML = null;
+    
+    // Array di numeri
+    var numeriPariDispari = numeriRandom(20);
+    console.log(numeriPariDispari);
 
+    for(var i = 0; i < numeriPariDispari.length; i++) {
+      if(numeriPariDispari[i] % 2 == 0) {
+        verdiPari.innerHTML += ' ' + numeriPariDispari[i];
+      } else {
+        rossiDispari.innerHTML += ' ' + numeriPariDispari[i];
+        }
+    }
 
-
-
-
-
-
-
-
-
-
+  }
+);
 
 //================ FINE ===================
+
+
+// ===========FUNCTION===============
+// Funzione per creare Numeri Casuali
+// ---> numero: è un valore numerico
+function numeriRandom(numero) {
+  var arrayNumeri = [];
+    for(var i= 0; i < numero; i++) {
+      var randomNumbers = Math.floor(Math.random() * 100 + 1);
+      arrayNumeri.push(randomNumbers);
+    }
+  return arrayNumeri;
+}
